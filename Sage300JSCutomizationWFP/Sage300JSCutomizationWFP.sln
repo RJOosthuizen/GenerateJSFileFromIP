@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2016
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sage300JSCutomizationWFP", "Sage300JSCutomizationWFP\Sage300JSCutomizationWFP.csproj", "{D5960A31-72DF-4595-8056-532681A0417B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D5960A31-72DF-4595-8056-532681A0417B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5960A31-72DF-4595-8056-532681A0417B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5960A31-72DF-4595-8056-532681A0417B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5960A31-72DF-4595-8056-532681A0417B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {60998167-4662-4C1B-BE3C-C383C8D7C3F6}
+	EndGlobalSection
+EndGlobal

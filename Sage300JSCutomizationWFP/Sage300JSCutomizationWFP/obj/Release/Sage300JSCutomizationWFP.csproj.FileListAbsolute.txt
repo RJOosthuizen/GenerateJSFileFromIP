@@ -1,0 +1,9 @@
+C:\Users\Ruan\Desktop\Sage300JSCutomizationWFP\Sage300JSCutomizationWFP\bin\Release\Sage300JSCutomizationWFP.exe.config
+C:\Users\Ruan\Desktop\Sage300JSCutomizationWFP\Sage300JSCutomizationWFP\bin\Release\Sage300JSCutomizationWFP.exe
+C:\Users\Ruan\Desktop\Sage300JSCutomizationWFP\Sage300JSCutomizationWFP\bin\Release\Sage300JSCutomizationWFP.pdb
+C:\Users\Ruan\Desktop\Sage300JSCutomizationWFP\Sage300JSCutomizationWFP\obj\Release\Sage300JSCutomizationWFP.ConfigForm.resources
+C:\Users\Ruan\Desktop\Sage300JSCutomizationWFP\Sage300JSCutomizationWFP\obj\Release\Sage300JSCutomizationWFP.Properties.Resources.resources
+C:\Users\Ruan\Desktop\Sage300JSCutomizationWFP\Sage300JSCutomizationWFP\obj\Release\Sage300JSCutomizationWFP.csproj.GenerateResource.cache
+C:\Users\Ruan\Desktop\Sage300JSCutomizationWFP\Sage300JSCutomizationWFP\obj\Release\Sage300JSCutomizationWFP.csproj.CoreCompileInputs.cache
+C:\Users\Ruan\Desktop\Sage300JSCutomizationWFP\Sage300JSCutomizationWFP\obj\Release\Sage300JSCutomizationWFP.exe
+C:\Users\Ruan\Desktop\Sage300JSCutomizationWFP\Sage300JSCutomizationWFP\obj\Release\Sage300JSCutomizationWFP.pdb
