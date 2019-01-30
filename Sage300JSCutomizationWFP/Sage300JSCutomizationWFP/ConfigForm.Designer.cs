@@ -33,6 +33,8 @@
             this.ConfirmIpButton = new System.Windows.Forms.Button();
             this.CloseButton = new System.Windows.Forms.Button();
             this.IpCapturedLabel = new System.Windows.Forms.Label();
+            this.ListViewResults = new System.Windows.Forms.ListView();
+            this.GenerateButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // IpAddressLabel
@@ -80,11 +82,33 @@
             this.IpCapturedLabel.Size = new System.Drawing.Size(0, 13);
             this.IpCapturedLabel.TabIndex = 4;
             // 
+            // ListViewResults
+            // 
+            this.ListViewResults.Location = new System.Drawing.Point(29, 165);
+            this.ListViewResults.Name = "ListViewResults";
+            this.ListViewResults.Size = new System.Drawing.Size(450, 258);
+            this.ListViewResults.TabIndex = 6;
+            this.ListViewResults.UseCompatibleStateImageBehavior = false;
+            this.ListViewResults.View = System.Windows.Forms.View.List;
+            // 
+            // GenerateButton
+            // 
+            this.GenerateButton.Location = new System.Drawing.Point(66, 105);
+            this.GenerateButton.Name = "GenerateButton";
+            this.GenerateButton.Size = new System.Drawing.Size(75, 23);
+            this.GenerateButton.TabIndex = 7;
+            this.GenerateButton.Text = "Generate";
+            this.GenerateButton.UseVisualStyleBackColor = true;
+            this.GenerateButton.Visible = false;
+            this.GenerateButton.Click += new System.EventHandler(this.GenerateButton_Click);
+            // 
             // ConfigForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.GenerateButton);
+            this.Controls.Add(this.ListViewResults);
             this.Controls.Add(this.IpCapturedLabel);
             this.Controls.Add(this.CloseButton);
             this.Controls.Add(this.ConfirmIpButton);
@@ -105,6 +129,8 @@
         private System.Windows.Forms.Button ConfirmIpButton;
         private System.Windows.Forms.Button CloseButton;
         private System.Windows.Forms.Label IpCapturedLabel;
+        private System.Windows.Forms.ListView ListViewResults;
+        private System.Windows.Forms.Button GenerateButton;
     }
 }
 

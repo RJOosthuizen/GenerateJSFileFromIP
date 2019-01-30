@@ -121,4 +121,13 @@
   <data name="APInvoiceEntry_Customization" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\APInvoiceEntry_Customization.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
+  <data name="ARInvoiceEntry_Customization" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ARInvoiceEntry_Customization.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Customer_Customization" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Customer_Customization.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Vendor_Customization" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Vendor_Customization.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
 </root>
