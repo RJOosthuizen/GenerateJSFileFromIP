@@ -35,6 +35,9 @@
             this.IpCapturedLabel = new System.Windows.Forms.Label();
             this.ListViewResults = new System.Windows.Forms.ListView();
             this.GenerateButton = new System.Windows.Forms.Button();
+            this.PortNumberLabel = new System.Windows.Forms.Label();
+            this.PortNumberInputTextBox = new System.Windows.Forms.TextBox();
+            this.PortNumberCapturedLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // IpAddressLabel
@@ -55,11 +58,11 @@
             // 
             // ConfirmIpButton
             // 
-            this.ConfirmIpButton.Location = new System.Drawing.Point(404, 39);
+            this.ConfirmIpButton.Location = new System.Drawing.Point(38, 136);
             this.ConfirmIpButton.Name = "ConfirmIpButton";
-            this.ConfirmIpButton.Size = new System.Drawing.Size(75, 23);
+            this.ConfirmIpButton.Size = new System.Drawing.Size(168, 23);
             this.ConfirmIpButton.TabIndex = 2;
-            this.ConfirmIpButton.Text = "Confirm IP";
+            this.ConfirmIpButton.Text = "Confirm IP and Port Number";
             this.ConfirmIpButton.UseVisualStyleBackColor = true;
             this.ConfirmIpButton.Click += new System.EventHandler(this.ConfirmIpButton_Click);
             // 
@@ -77,7 +80,7 @@
             // 
             this.IpCapturedLabel.AutoSize = true;
             this.IpCapturedLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IpCapturedLabel.Location = new System.Drawing.Point(540, 44);
+            this.IpCapturedLabel.Location = new System.Drawing.Point(522, 40);
             this.IpCapturedLabel.Name = "IpCapturedLabel";
             this.IpCapturedLabel.Size = new System.Drawing.Size(0, 13);
             this.IpCapturedLabel.TabIndex = 4;
@@ -93,7 +96,7 @@
             // 
             // GenerateButton
             // 
-            this.GenerateButton.Location = new System.Drawing.Point(66, 105);
+            this.GenerateButton.Location = new System.Drawing.Point(369, 136);
             this.GenerateButton.Name = "GenerateButton";
             this.GenerateButton.Size = new System.Drawing.Size(75, 23);
             this.GenerateButton.TabIndex = 7;
@@ -102,11 +105,39 @@
             this.GenerateButton.Visible = false;
             this.GenerateButton.Click += new System.EventHandler(this.GenerateButton_Click);
             // 
+            // PortNumberLabel
+            // 
+            this.PortNumberLabel.AutoSize = true;
+            this.PortNumberLabel.Location = new System.Drawing.Point(26, 93);
+            this.PortNumberLabel.Name = "PortNumberLabel";
+            this.PortNumberLabel.Size = new System.Drawing.Size(168, 13);
+            this.PortNumberLabel.TabIndex = 8;
+            this.PortNumberLabel.Text = "Enter the Port Number to be used:";
+            // 
+            // PortNumberInputTextBox
+            // 
+            this.PortNumberInputTextBox.Location = new System.Drawing.Point(221, 93);
+            this.PortNumberInputTextBox.Name = "PortNumberInputTextBox";
+            this.PortNumberInputTextBox.Size = new System.Drawing.Size(126, 20);
+            this.PortNumberInputTextBox.TabIndex = 9;
+            // 
+            // PortNumberCapturedLabel
+            // 
+            this.PortNumberCapturedLabel.AutoSize = true;
+            this.PortNumberCapturedLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PortNumberCapturedLabel.Location = new System.Drawing.Point(522, 93);
+            this.PortNumberCapturedLabel.Name = "PortNumberCapturedLabel";
+            this.PortNumberCapturedLabel.Size = new System.Drawing.Size(0, 13);
+            this.PortNumberCapturedLabel.TabIndex = 10;
+            // 
             // ConfigForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.PortNumberCapturedLabel);
+            this.Controls.Add(this.PortNumberInputTextBox);
+            this.Controls.Add(this.PortNumberLabel);
             this.Controls.Add(this.GenerateButton);
             this.Controls.Add(this.ListViewResults);
             this.Controls.Add(this.IpCapturedLabel);
@@ -131,6 +162,9 @@
         private System.Windows.Forms.Label IpCapturedLabel;
         private System.Windows.Forms.ListView ListViewResults;
         private System.Windows.Forms.Button GenerateButton;
+        private System.Windows.Forms.Label PortNumberLabel;
+        private System.Windows.Forms.TextBox PortNumberInputTextBox;
+        private System.Windows.Forms.Label PortNumberCapturedLabel;
     }
 }
 

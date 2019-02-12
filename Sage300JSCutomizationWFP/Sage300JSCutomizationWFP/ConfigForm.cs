@@ -18,19 +18,43 @@ namespace Sage300JSCutomizationWFP
 
         private void ConfirmIpButton_Click(object sender, EventArgs e)
         {
+            //THIS IS TO CHECK IF DATA ENTERRED IS NOT BLANK AND SHOW THE GENERATE BUTTON
+            //declare ip + port num
             string ipAddress = IpInputTextBox.Text.Trim();
+            string portNumber = PortNumberInputTextBox.Text.Trim();
+            bool ipShowButton = false;
+            bool portNumberShowButton = false;
+
+            //test for empty ip address
             if (ipAddress != "")
             {
                 IpCapturedLabel.Text = "IP: " + ipAddress + " has been captured!";
-                GenerateButton.Visible = true;
+                ipShowButton = true;
             }
             else
             {
                 IpCapturedLabel.Text = "IP cannot be empty.";
                 GenerateButton.Visible = false;
             }
+            //test for empty port number
+            if (portNumber != "")
+            {
+                PortNumberCapturedLabel.Text = "Port Number: " + portNumber + " has been captured!";
+                portNumberShowButton = true;
+            }
+            else
+            {
+                PortNumberCapturedLabel.Text = "Port Number cannot be empty.";
+                GenerateButton.Visible = false;
+            }
+            //if both ip and port number are captured then show generate button
+            if (ipShowButton && portNumberShowButton)
+            {
+                GenerateButton.Visible = true;
+            }
+
         }
-        public void GenerateFileInfo(string ipAddress)
+        public void GenerateFileInfo(string ipAddress, string portNumber)
         {
             //CREATE APINVOICE OBJECT
             FileInfo ApInvoiceFile = new FileInfo();
@@ -42,6 +66,10 @@ namespace Sage300JSCutomizationWFP
             //replace ApInvoice ip with new ip
             ApInvoiceFile.IpAddress = ipAddress;
             ApInvoiceFile.JsFileContent = ApInvoiceFile.JsFileContent.Replace("REPLACEME", ApInvoiceFile.IpAddress);
+
+            //replace ApInvoice PortNumber with new PortNumber
+            ApInvoiceFile.PortNumber = portNumber;
+            ApInvoiceFile.JsFileContent = ApInvoiceFile.JsFileContent.Replace("PortNumToReplace", ApInvoiceFile.PortNumber);
 
             //Write new ApInvoice .js file
             using (StreamWriter ApInvoiceOutputFile = new StreamWriter(Path.Combine(ApInvoiceFile.DocPath + ApInvoiceFile.SubPath, ApInvoiceFile.JsFileName)))
@@ -68,6 +96,10 @@ namespace Sage300JSCutomizationWFP
             ArInvoiceFile.IpAddress = ipAddress;
             ArInvoiceFile.JsFileContent = ArInvoiceFile.JsFileContent.Replace("REPLACEME", ArInvoiceFile.IpAddress);
 
+            //replace ArInvoice PortNumber with new PortNumber
+            ArInvoiceFile.PortNumber = portNumber;
+            ArInvoiceFile.JsFileContent = ArInvoiceFile.JsFileContent.Replace("PortNumToReplace", ArInvoiceFile.PortNumber);
+
             //Write new ArInvoice .js file
             using (StreamWriter ArInvoiceOutputFile = new StreamWriter(Path.Combine(ArInvoiceFile.DocPath + ArInvoiceFile.SubPath, ArInvoiceFile.JsFileName)))
             {
@@ -89,11 +121,15 @@ namespace Sage300JSCutomizationWFP
             ApVendorFile.DocPath = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\Sage300CustomizationScreens";
             ApVendorFile.SubPath = "\\APVendors";
 
-            //replace ArInvoice ip with new ip
+            //replace ApVendor ip with new ip
             ApVendorFile.IpAddress = ipAddress;
             ApVendorFile.JsFileContent = ApVendorFile.JsFileContent.Replace("REPLACEME", ApVendorFile.IpAddress);
 
-            //Write new ArInvoice .js file
+            //replace ApVendor PortNumber with new PortNumber
+            ApVendorFile.PortNumber = portNumber;
+            ApVendorFile.JsFileContent = ApVendorFile.JsFileContent.Replace("PortNumToReplace", ApVendorFile.PortNumber);
+
+            //Write new ApVendor .js file
             using (StreamWriter ApVendorOutputFile = new StreamWriter(Path.Combine(ApVendorFile.DocPath + ApVendorFile.SubPath, ApVendorFile.JsFileName)))
             {
                 ApVendorOutputFile.WriteLine(ApVendorFile.JsFileContent);
@@ -114,11 +150,15 @@ namespace Sage300JSCutomizationWFP
             ArCustomerFile.DocPath = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\Sage300CustomizationScreens";
             ArCustomerFile.SubPath = "\\ARCustomers";
 
-            //replace ArInvoice ip with new ip
+            //replace ArCustomer ip with new ip
             ArCustomerFile.IpAddress = ipAddress;
             ArCustomerFile.JsFileContent = ArCustomerFile.JsFileContent.Replace("REPLACEME", ArCustomerFile.IpAddress);
 
-            //Write new ArInvoice .js file
+            //replace ArCustomer PortNumber with new PortNumber
+            ArCustomerFile.PortNumber = portNumber;
+            ArCustomerFile.JsFileContent = ArCustomerFile.JsFileContent.Replace("PortNumToReplace", ArCustomerFile.PortNumber);
+
+            //Write new ArCustomer .js file
             using (StreamWriter ArCustomerOutputFile = new StreamWriter(Path.Combine(ArCustomerFile.DocPath + ArCustomerFile.SubPath, ArCustomerFile.JsFileName)))
             {
                 ArCustomerOutputFile.WriteLine(ArCustomerFile.JsFileContent);
@@ -158,14 +198,37 @@ namespace Sage300JSCutomizationWFP
 
         private void GenerateButton_Click(object sender, EventArgs e)
         {
+            //THIS IS TO CALL THE GENERATE FUNCTION IF THE DATA ENTERRED IS NOT BLANK
+            //declare ip + port vars
             string ipAddress = IpInputTextBox.Text.Trim();
+            string portNumber = PortNumberInputTextBox.Text.Trim();
+            bool ipShowButton = false;
+            bool portNumberShowButton = false;
+
+            //check if ip is empty
             if (ipAddress != "")
             {
-                GenerateFileInfo(ipAddress);
+                ipShowButton = true;
             }
             else
             {
                 IpCapturedLabel.Text = "IP cannot be empty.";
+                GenerateButton.Visible = false;
+            }
+            //check if port number is empty
+            if (portNumber != "")
+            {
+                portNumberShowButton = true;
+            }
+            else
+            {
+                PortNumberCapturedLabel.Text = "Port Number cannot be empty.";
+                GenerateButton.Visible = false;
+            }
+            //if both ip and port number are captured then show generate button
+            if (ipShowButton && portNumberShowButton)
+            {
+                GenerateFileInfo(ipAddress, portNumber);
             }
         }
     }

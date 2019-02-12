@@ -13,5 +13,6 @@ namespace Sage300JSCutomizationWFP
         public string DocPath { get; set; }
         public string SubPath { get; set; }
         public string IpAddress { get; set; }
+        public string PortNumber { get; set; }
     }
 }
